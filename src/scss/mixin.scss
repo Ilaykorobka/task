@@ -1,0 +1,15 @@
+@mixin main-font {
+	font-family: 'PT Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@mixin main-font-bold {
+	font-family: 'PT Sans', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+@mixin font-size($font-size) {
+	font-size: $font-size / 16 + rem;
+}
