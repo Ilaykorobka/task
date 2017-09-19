@@ -5,6 +5,23 @@
 
 @import "mixin.scss";
 @import "variables.scss";
+@font-face{
+  font-family: "PT Sans Narrow";
+  font-weight: 400;
+  font-style: normal;
+  src: local("PT Sans Narrow"), local("PTSans-Narrow"),
+  url("../fonts/ptsansnarrow.woff2") format("woff2"),
+  url("../fonts/ptsansnarrow.woff") format("woff");
+}
+
+@font-face{
+  font-family: "PT Sans Narrow";
+  font-weight: 700;
+  font-style: normal;
+  src: local("PT Sans Narrow Bold"), local("PTSans-NarrowBold"),
+  url("../fonts/ptsansnarrowbold.woff2") format("woff2"),
+  url("../fonts/ptsansnarrowbold.woff") format("woff");
+}
 
 /*
 ======default settings======
@@ -16,6 +33,10 @@
 
 body,html{
    margin: 0;
+}
+
+body{
+	background: $bg;
 }
 
 ol,ul{
@@ -32,14 +53,134 @@ a{
    text-decoration: none;
 }
 
+
+.container{
+	max-width: 1200px;
+	padding: 0 15px;
+	position: relative;
+	margin: 0 auto;
+}
+
 /*
 ======header======
 */
+
+
 
 /*
 ======main======
 */
 
+
+/*
+======first section======
+*/
+
+
+.first-section{
+	width: 100%;
+	height: 380px;
+	background: url('../img/bg-header.jpg') center center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.first-section-angel{
+	width: 100%;
+	height: 380px;
+	background: url('../img/angle-div-first.png') bottom no-repeat;
+	background-size: contain;
+	z-index: 999;
+	bottom: 0;
+	left: 0;
+}
+
+
+/*
+======second section======
+*/
+
+.second-section__content-wrap{
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100%;
+	height: 1335px;
+	background: $bg;
+	padding-top: 65px;
+}
+
+.second-section__top{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.second-section__title{
+	display: flex;
+	font-family: $font-basic, sans-serif;
+	font-size: 2.5 rem;
+	line-height: 2.75 rem;
+	font-weight: 700; 
+	text-transform: uppercase;
+	margin-left: 90px;
+}
+
+.second-section__form{
+	margin-right: 90px;
+	border: 1px solid $border;
+	padding: 15px 35px;
+}
+
+.second-section__link-desc{
+	font-family: $font-basic, sans-serif;
+	font-size: 1.125 rem;
+	line-height: 1.25 rem;
+	font-weight: 700; 
+	text-transform: uppercase;
+	color: #000;
+}
+.big-img{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	padding-top: 90px;
+}
+
+.first-man{
+	width: 480px;
+	height: 480px;
+}
+
+.clearfix{
+	clear: both;
+}
+
+.label{
+	float: right;
+    display: inline-flex;
+    margin: 25px 0;
+}
+
+.label-marker{
+	background: url( '../img/before-label.png');
+	width: 8px;
+	height: 50px;
+}
+
+.label__title{
+	padding: 15px;
+    background: #826550;
+}
+
+.big-img__desc {
+	text-align: left;
+	width: 480px;
+	height: 480px;
+	border-top: 1px solid $border;
+	border-bottom: 1px solid $border;
+	border-right: 1px solid $border;
+}
 /*
 ======footer======
 */
