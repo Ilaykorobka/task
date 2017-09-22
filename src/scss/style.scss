@@ -4,7 +4,7 @@
 */
 
 @import "mixin.scss";
-@import "variables.scss";
+
 
 /*
 ======default settings======
@@ -24,8 +24,9 @@ ol,ul{
    list-style: none;
 }
 
-h1,h2,h3,h4,h5,h6,p{
-   margin-bottom: 0;
+h1,h2,h3,h4,h5,h6,p {
+   margin: 0;
+   padding: 0;
 }
 
 a{
@@ -52,8 +53,6 @@ a{
 /*
 ======main======
 */
-
-@import 'form.scss'
 
 /*
 ======footer======

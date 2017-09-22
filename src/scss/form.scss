@@ -1,5 +1,34 @@
-body {
+
+/*
+======import======
+*/
+
+@import "mixin.scss";
+
+/*
+======import======
+*/
+
+
+.header {
+	width: 100%;
+	height: 310px;
+	background: lightcoral;
+}
+
+.maincontent {
 	background: #f8f5f2;
+	padding-top: 55px;
+	position: relative;
+	&:after {
+		content: '';
+		height: 75px;
+		width: 100%;
+		position: absolute;
+		top: -75px;
+		background: url(../img/angle.png) center center no-repeat;
+		background-size: cover;
+	}
 }
 
 .form__title {
@@ -7,11 +36,11 @@ body {
 	@include font-size(40);
 	text-transform: uppercase;
 	line-height: 30px;
+	margin-right: auto;
 }
 
 .flex-container {
 	align-items: center;
-	justify-content: space-between;
 }
 
 .form__link {
@@ -21,7 +50,14 @@ body {
 	display: block;
 	padding: 15px 30px;
 	color: #000;
-	border: 1px solid #e5ddd5;
+	border: 1px solid #e5ddd5;	
+	&:hover {
+		border-color: #d5cabe;
+	}
+	&:active {
+		background: #d5cabe;
+		color: rgba(0, 0, 0, .3);
+	}
 }
 
 .form__textfield {
@@ -30,8 +66,15 @@ body {
 	@include main-font;
 	@include font-size(24);
 	margin-right: 33px;
+	outline: none;
 	&:last-child {
 		margin-right: 0;
+	}
+	&:hover {
+		border-color: #d5cabe;
+	}
+	&:focus {
+		border-color: #000;
 	}
 	&::-webkit-input-placeholder {
 		color: #000;
@@ -66,12 +109,15 @@ body {
 .form__textfield--info {
 	width: 100%;
 	height: 210px;
+	resize: none;
 }
 
 .heading {
+	margin-top: 50px;
 	text-align: center;
 	position: relative;
 	margin-bottom: 50px;
+	z-index: 1;
 	&:after {
 		content: '';
 		height: 1px;
@@ -87,7 +133,9 @@ body {
 	@include main-font;
 	@include font-size(30);
 	text-transform: uppercase;
-	z-index: 999;
+	z-index: 9;
+	padding: 0 30px;
+	position: relative;
 	background: #f8f5f2;
 }
 
@@ -98,13 +146,19 @@ body {
 
 .beard__item {
 	text-align: center;
+	&:hover > label > .radio-btn:before {
+		border: 1px solid #d5cabe;
+	}
+	&:hover > label > .radio-btn {
+		border: 1px solid #d5cabe;
+	}
 }
 
-.radio-hidden {
+.hidden {
 	position: absolute;
 	visibility: hidden;
-	&:checked + label > .radio-btn:before {
-		border: 1px solid #e5ddd5;
+	&:checked + label > .radio-btn {
+		background: #d5c9bd;
 	}
 }
 
@@ -116,20 +170,112 @@ body {
 	border-radius: 50%;
 	border: 1px solid #e5ddd5;
 	position: relative;
+	transition: background .2s ease-in-out;
 	&:before {
 		content: '';
+		background: #fff;
 		width: 18px;
 		height: 18px;
 		position: absolute;
 		border-radius: 50%;
+		border: 1px solid #e5ddd5;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
 	}
 }
 
-.beard__desc {
+.item__desc {
 	@include main-font;
 	@include font-size(24);
-	margin-bottom: 30px;
+	padding-bottom: 30px;
+	padding-top: 20px;
 }
+
+.radio-btn, .item__desc, .beard__img, .checkbox {
+	cursor: pointer;
+}
+
+.service__list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: -45px;
+} 
+
+.service__item {
+	width: 33%;
+	margin-bottom: 45px;
+}
+
+.service__item > label {
+	display: flex;
+	align-items: center;
+}
+
+.checkbox {
+	width: 35px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #e5ddd5;
+	position: relative;
+	&:before {
+		content: '';
+		width: 22px;
+		height: 16px;
+		background: url(../img/check.png) center center no-repeat;
+		position: absolute;
+		opacity: 0;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: opacity .3s ease-in-out;
+	}
+}
+
+.item__desc--pl {
+	padding: 0 0 0 25px;
+}
+
+.hidden--checkbox:checked + label > .checkbox:before {
+	opacity: 1;
+}
+
+.form-btn:disabled {
+	background: #aeaeae;
+	cursor: auto;
+	&:hover {
+		background: #aeaeae;
+	}
+}
+
+.form-btn {
+	margin-top: 65px;
+	margin-bottom: 75px;
+	color: #fff;
+	text-transform: uppercase;
+	@include main-font;
+	@include font-size(24);
+	background: #826550;
+	border: none;
+	outline: none;
+	width: 100%;
+	padding: 25px 0;
+	cursor: pointer;
+	transition: background .3s ease-in-out;
+	&:hover {
+		background: #6a4d38;
+	}
+	&:active {
+		color: rgba(255, 255, 255, .3);
+	}
+}
+
+/*
+======import======
+*/
+
+@import "modal-window.scss";
+
+/*
+======import======
+*/
