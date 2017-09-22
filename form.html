@@ -25,7 +25,6 @@
       <link rel="stylesheet" href="src/css/style.css">
       <link rel="stylesheet" href="src/css/form.css">
    <!-- Media Queries CSS =========================================== -->
-      <link rel="stylesheet" href="src/css/media.css">
    <!-- Script =========================================== -->
    <!-- IE ============================================ -->
        <!--[if lt IE 8]>
@@ -60,14 +59,14 @@
               </div><!-- ./flex-container -->
               
             <!-- form -->
-            <form class="form">  
+            <form class="form" onsubmit="return false;">  
 
               <div class="textfield-wrap textfield-wrap--mt">
                 <input type="text" name="text" class="form__textfield form__textfield--name" placeholder="Имя" id="name" onkeyup="checkParams()" required>
                 <input type="text" name="text" class="form__textfield form__textfield--name" placeholder="Фамилия" id="surname" onkeyup="checkParams()" required>
                 <input type="text" name="text" class="form__textfield form__textfield--name" placeholder="Отчество">
               </div>
-              <div class="textfield-wrap textfield-wrap--required">
+              <div class="textfield-wrap">
                 <input type="tel" name="text" class="form__textfield form__textfield--contact" placeholder="Контактный телефон" id="phone" onkeyup="checkParams()" data-mask="(000) 000-0000" required>
                 <input type="email" name="text" class="form__textfield form__textfield--contact" placeholder="Контактный e-mail" id="email" onkeyup="checkParams()" required>
               </div>
@@ -216,6 +215,15 @@
     </form>
   </div><!-- ./modal window -->
 
+  
+  <!-- success-modal -->
+  <div class="success-modal">
+    <h2 class="modal-window__title">это успех!</h2>
+    <p class="modal-window__desc modal-window__desc--mt">Ваша заявка отправлена.</p>
+    <p class="modal-window__desc modal-window__desc--mt">Ожидайте, мы свяжемся с вами как только будет минутка</p>
+    <a href="#1" class="form-btn form-btn--modal form-btn--link">закрыть окно</a>
+  </div><!-- ./success-modal -->
+
 
 
 <!-- jquery & libs
@@ -239,7 +247,9 @@
         $('#submit').attr('disabled', 'disabled');
     }
 }
+
 </script>
+
 
 
 </body>

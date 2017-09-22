@@ -3,7 +3,7 @@
 ======import======
 */
 
-@import "mixin.scss";
+@import "mixin-form.scss";
 
 /*
 ======import======
@@ -133,7 +133,7 @@
 	@include main-font;
 	@include font-size(30);
 	text-transform: uppercase;
-	z-index: 9;
+	z-index: 2;
 	padding: 0 30px;
 	position: relative;
 	background: #f8f5f2;
@@ -270,12 +270,48 @@
 	}
 }
 
+
+
 /*
 ======import======
 */
 
 @import "modal-window.scss";
 
+
+
 /*
-======import======
+======success-modal======
 */
+
+.success-modal {
+	display: none;
+	width: 460px;
+	height: 315px;
+	background: #fff;
+	padding: 60px 70px 45px 70px;
+	position: absolute;
+	z-index: 100;
+	left: 50%;
+	bottom: -800px;
+	transform: translateX(-50%);
+	box-shadow: 0 20px 60px rgba(0, 0, 0, .8);
+}
+
+.modal-window__desc--mt {
+	margin-bottom: 0;
+}
+
+.form-btn--link {
+	display: block;
+	text-align: center;
+	@include main-font-bold;
+	@include font-size(18);
+}
+
+
+/*
+======media======
+*/
+
+@import "media-form.scss";
