@@ -16,7 +16,6 @@
     padding-top: 110px;
     margin-top: -70px; }
   .info-top {
-    height: 503px;
     top: 66px;
     margin-bottom: -180px;
     display: -webkit-box;
@@ -30,7 +29,6 @@
     flex-direction: column; }
   .info-top__desc-block {
     width: 100%;
-    height: 185px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -81,6 +79,8 @@
     text-align: left; }
   .info-bottom__desc {
     text-align: left; }
+  .dot-tablet {
+    background: none; }
   .section-news__link:hover, .section-reviews__link:hover {
     background: #d5c9bd;
     color: #958c84; }
@@ -208,12 +208,22 @@
   .social-block__item:hover {
     border: transparent;
     background: #252525;
-    color: #676767; } }
+    color: #676767; }
+  .dot-tablet {
+    display: none; } }
 
 @media screen and (max-width: 721px) {
+  .wrapper {
+    overflow: hidden; }
+  .dot-tablet {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
   .container {
     width: 95%;
-    margin: auto; }
+    margin: auto;
+    padding: 5px; }
   .header-bottom {
     background: #242424;
     height: 85px;
@@ -243,20 +253,24 @@
     flex-direction: column;
     height: 100vh;
     background: #6a4d38;
-    width: 250px; }
+    width: 250px;
+    -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.8);
+    box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.8); }
   .nav-menu {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
   .nav-menu {
-    position: absolute;
+    position: fixed;
     top: 109px;
     right: -249px;
     z-index: 999999999999999; }
   .header {
     height: 0; }
   .nav-menu__item {
+    -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.8);
+    box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.8);
     width: 250px;
     height: 49px;
     padding-left: 20px;
@@ -272,6 +286,10 @@
     border-bottom: 1px solid #71543f; }
     .nav-menu__item:last-child {
       border-bottom: none; }
+  .dot-active-mob {
+    background: #858483; }
+  .dot-tablet {
+    background: none; }
   .section-news__header {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -293,7 +311,7 @@
     align-items: center; }
   .section-news__link--desktop {
     display: none; }
-  .input:checked ~ .nav-menu {
+  .success-modal--active {
     right: -63px; }
   .sing-in--mobile {
     background: #6a4d38;
@@ -352,6 +370,8 @@
     flex-direction: column; }
     .info-top:after {
       background: none; }
+  .info-top__desc--block {
+    height: auto; }
   .info-top__desc--desktop {
     display: -webkit-box;
     display: -webkit-flex;
@@ -462,12 +482,13 @@
     display: none; }
   .social-block__title {
     display: none; }
+  .social-block__list {
+    width: 100%; }
   .social-block__item {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 105px;
     margin-right: 0; }
   .social-block__link {
     width: 100%;
@@ -522,10 +543,6 @@
     line-height: 1.5rem; }
     .third-block__link-tablet:hover {
       border: 1px solid #545454; }
-  .second {
-    display: none; }
-  .third {
-    display: none; }
   .section-news__footer {
     margin-top: 10px;
     display: -webkit-box;
@@ -544,4 +561,44 @@
     -ms-flex-pack: center;
     justify-content: center; }
   .slider__btn-right, .slider__btn-left {
+    display: none; }
+  .slider__article {
+    border: none; }
+  .section-news__link {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .section-news__link--desktop {
+    display: none; }
+  .info-bottom__card {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: none; }
+  .info-bottom__icon-block {
+    padding: 30px 0; }
+  .info-bottom__desc {
+    text-align: center; }
+  .info-bottom__title {
+    text-align: center; }
+  .second {
+    display: none; }
+  .third {
     display: none; } }

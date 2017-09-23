@@ -172,8 +172,6 @@ a {
 /*==========info-top==========*/
 .info-top {
   width: 100%;
-  height: 318px;
-  background: #fff;
   position: relative;
   top: -50%;
   left: 50%;
@@ -188,7 +186,7 @@ a {
   .info-top:after {
     content: "";
     position: absolute;
-    top: 37px;
+    top: 40px;
     left: -23px;
     width: 23px;
     height: 23px;
@@ -196,7 +194,23 @@ a {
 
 .info-top__desc-block {
   width: 580px;
-  padding: 30px; }
+  padding: 30px;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.info-top__deck-tablet {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .info-top__title {
   margin-top: 0;
@@ -217,8 +231,11 @@ a {
   display: none; }
 
 .info-top__bottom-text {
-  display: inline-block;
-  margin-top: 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: auto;
   font-family: "PT Sans Narrow";
   color: rgba(0, 0, 0, 0.3);
   font-size: 1.25rem;
@@ -234,26 +251,22 @@ a {
   flex-wrap: wrap; }
 
 .info-top__block-one {
-  width: 320px;
-  height: 159px;
+  width: 50%;
   background: #404040;
   padding: 20px; }
 
 .info-top__block-two {
-  width: 320px;
-  height: 159px;
+  width: 50%;
   background: #4e4e4e;
   padding: 20px; }
 
 .info-top__block-three {
-  width: 320px;
-  height: 159px;
+  width: 50%;
   background: #353535;
   padding: 20px; }
 
 .info-top__block-four {
-  width: 320px;
-  height: 159px;
+  width: 50%;
   background: #404040;
   padding: 20px; }
 
@@ -438,7 +451,10 @@ a {
     left: 0;
     width: 100%;
     height: 10px;
-    background: url(../img/date-bottom.png) no-repeat; }
+    background: url(../img/date-bottom.png) no-repeat;
+    -webkit-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in; }
   .section-news__block-date:hover {
     background: #826550; }
     .section-news__block-date:hover:before {
@@ -716,8 +732,7 @@ a {
     border: 1px solid #545454; }
 
 .dot-tablet {
-  display: none;
-  background: none; }
+  display: none; }
 
 .social-block--tablet {
   display: none; }
