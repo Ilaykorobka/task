@@ -1,7 +1,37 @@
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1051px) {
    .container {
    		width: 640px;
    }
+
+    .sing-in__link{
+        display: none;
+    }
+    
+    .header-bottom__logo-desktop{
+        display: none;
+    }
+
+    .header-bottom__logo-tablet{
+        display: inline-block;
+    }
+    
+    .nav-menu__link{
+        .nav-menu__item:hover &{
+            color: #353535;
+        }
+    }
+    
+    .sing-in__link-before{
+        &:hover{
+            background: url(../img/sing-in-hvr-tablet.png) no-repeat;
+        }
+    }
+    
+    .header-bottom{
+        height: 250px;
+        padding-top: 100px;
+        margin-top: -70px;
+    }
 
    .textfield-wrap {
    		font-size: 0;
@@ -27,7 +57,60 @@
    .service__item {
    		width: 50%;
    }
+
+       .social-block--tablet{
+        display: inline-block;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        border: 1px solid #3f3f3f;
+    }
+
+    .footer-wrap{
+        padding-bottom: 60px;
+    }
+    
+    .social-block--desktop{
+        display: none;
+    }
+
+    .social-block__item{
+        width: 33.5%;
+        margin-right: 0;
+    }
+    
+    .social-block__link{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .2s ease-in;
+        border: 1px solid #3f3f3f;
+        &:hover{
+            border: 1px solid #545454;
+        }
+    }
+    
+    .third-block__link{
+        &:hover{
+            border: transparent;
+            background: #252525;
+            color: #676767;
+        }
+    }
+    
+    .social-block__item{
+        &:hover{
+            border: transparent;
+            background: #252525;
+            color: #676767;
+        }
+    }
 }
+
+
+
 
 @media screen and (max-width: 671px) {
 	.container {

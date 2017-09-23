@@ -22,8 +22,7 @@
    <!-- CSS =========================================== -->
       <link rel="stylesheet" href="src/libs/fonts/fonts.css">
       <link rel="stylesheet" href="src/css/libs.css">
-      <link rel="stylesheet" href="src/css/style.css">
-      <link rel="stylesheet" href="src/css/form.css">
+      <link rel="stylesheet" href="src/css/style-form.css">
    <!-- Media Queries CSS =========================================== -->
    <!-- Script =========================================== -->
    <!-- IE ============================================ -->
@@ -42,8 +41,39 @@
 <body>
 
 <!-- - - - -  header - - - - -->
-    <header class="header">
-    </header><!-- /.header -->
+     <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <nav class="nav-menu">
+                    <input type="checkbox" class="input" id="button">
+                    <label for="button" class="btn">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </label>
+                    <ul class="nav-menu__list">
+                        <li class="nav-menu__item"><a href="index.html" class="nav-menu__link">главная</a></li>
+                        <li class="nav-menu__item"><a href="#" class="nav-menu__link">наши работы</a></li>
+                        <li class="nav-menu__item"><a href="#" class="nav-menu__link current">записаться</a></li>
+                        <li class="nav-menu__item"><a href="#" class="nav-menu__link">контакты</a></li>
+                        <li class="nav-menu__item sing-in--mobile">
+                            <a href="#" class="sing-in__link-before"> 
+                               <h3 class="sing-in__link">вход</h3>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="sing-in-wrap">
+                    <a href="#modal-window" class="sing-in__link-before" rel="modal:open"> 
+                        <h3 class="sing-in__link">вход</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+     </header><!-- ./header -->
+     <div class="header-bottom">
+        <img src="src/img/logotype-back-home.png" alt="logotype" class="header-bottom__logo-desktop">
+        <img src="src/img/logo-type-tablet.png" alt="logotype" class="header-bottom__logo-tablet">
+        <img src="src/img/logotype-mobile.png" alt="logotype" class="header-bottom__logo-mobile">
+     </div>
 
 <!-- - - - maincontent- - -  -->
       <div class="maincontent">
@@ -55,11 +85,11 @@
               <!-- flex-container -->
               <div class="flex-container">
                 <h1 class="form__title">запись на стрижку</h1>
-                <a class="form__link" href="#modal-window" rel="modal:open">на главную</a>
+                <a class="form__link" href="index.html">на главную</a>
               </div><!-- ./flex-container -->
               
             <!-- form -->
-            <form class="form" onsubmit="return false;">  
+            <form class="form" >  
 
               <div class="textfield-wrap textfield-wrap--mt">
                 <input type="text" name="text" class="form__textfield form__textfield--name" placeholder="Имя" id="name" onkeyup="checkParams()" required>
@@ -179,17 +209,51 @@
                 </li><!-- ./service__item -->
               </ul>
               
-              <input type="submit" class="form-btn" value="отправить заявку" id="submit" disabled>
+
+              <!-- submit -->
+              <input type="submit" class="form-btn" value="отправить заявку" id="submit" onclick="myFunction()" disabled>
+              <!-- ./submit -->
+
 
             </form><!-- ./form -->
           </div><!-- ./container -->
          </div> <!-- ./form-wrap -->
       </div><!-- /.maincontent -->
 
-	<!-- - - - footer- - - - -->
-     <footer class="footer">
 
-     </footer><!-- /.footer -->
+
+	<!-- - - - footer- - - - -->
+      <!-- - - - footer- - - - -->
+     <footer class="footer">
+        <div class="container">
+            <div class="footer-wrap">
+                <ul class="footer-wrap__list">
+                    <li class="contacts-block">
+                        <h2 class="contacts-block__title-name">Барбершоп Бородинский</h2>
+                        <h3 class="contacts-block__adres">г. Санкт-Петербург, ул. Большая Конюшенная 19/8</h3>
+                        <a href="tel+7 (812) 555-66-66" class="contacts-block__tel third-block__link-tablet">Тел.: +7 (812) 555-66-66</a>
+                    </li>
+                    <li class="social-block social-block--desktop">
+                        <h2 class="social-block__title">Давайте дружить!</h2>
+                        <ul class="social-block__list">
+                            <li class="social-block__item"><a href="#" class="social-block__link"><img class="social-block__icon" src="src/img/vk-icon-small.png" alt="vk-icon"></a></li>
+                            <li class="social-block__item"><a href="#" class="social-block__link"><img class="social-block__icon" src="src/img/facebook-icon-small.png" alt="facebook-icon"></a></li>
+                            <li class="social-block__item"><a href="#" class="social-block__link"><img class="social-block__icon" src="src/img/insta-icon-small.png" alt="insta-icon"></a></li>
+                        </ul>
+                    </li>
+                    <li class="third-block">
+                        <h2 class="third-block__title">Разработано:</h2>
+                        <a href="#" class="third-block__link">free template</a>
+                    </li>
+                </ul>
+                <ul class="social-block__list social-block--tablet">
+                    <li class="social-block__item"><a href="#" class="social-block__link"><img class="social-block__icon" src="src/img/vk-icon-small.png" alt="vk-icon"></a></li>
+                    <li class="social-block__item"><a href="#" class="social-block__link"><img class="social-block__icon" src="src/img/facebook-icon-small.png" alt="facebook-icon"></a></li>
+                    <li class="social-block__item"><a href="#" class="social-block__link"><img class="social-block__icon" src="src/img/insta-icon-small.png" alt="insta-icon"></a></li>
+                </ul>
+            </div>
+        </div>
+     </footer><!-- ./footer -->
 
 
   
@@ -217,7 +281,7 @@
 
   
   <!-- success-modal -->
-  <div class="success-modal">
+  <div class="success-modal" id="success-modal">
     <h2 class="modal-window__title">это успех!</h2>
     <p class="modal-window__desc modal-window__desc--mt">Ваша заявка отправлена.</p>
     <p class="modal-window__desc modal-window__desc--mt">Ожидайте, мы свяжемся с вами как только будет минутка</p>
@@ -248,7 +312,20 @@
     }
 }
 
+ var sbmBtn = $('#submit'),
+              successModal = $('#success-modal');
+
+          sbmBtn.on('click', function(e) {
+            e.preventDefault();
+            successModal.addClass('success-modal--active');
+          })
+
+          $('.form-btn--link').on('click', function(e) {
+            e.preventDefault();
+            successModal.removeClass('success-modal--active');
+          })
 </script>
+
 
 
 
